@@ -1,0 +1,150 @@
+.coffee {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 120px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 25%;
+    background-color: var(--color-concrete);
+  }
+
+  &::after {
+    width: 75%;
+    background-color: var(--color-mystic);
+  }
+
+  h2 {
+    margin-bottom: 50px;
+    padding-top: 90px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--color-fiord);
+
+    span {
+      display: block;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 900;
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.inner {
+  @include flex-sb;
+}
+
+article {
+  @include flex-sb;
+  padding: 0 20px 50px;
+  width: 100%;
+  max-width: 985px;
+  box-shadow: 1px 0 10px rgba(205, 205, 205, 0.5);
+  background-color: var(--color-white);
+
+  span {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--color-tan);
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--color-ebony);
+  }
+}
+
+.descr {
+  width: 100%;
+  max-width: 430px;
+
+  ul {
+    @include flex-sa;
+    margin-bottom: 45px;
+  }
+
+  .item {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -45px;
+      width: 40px;
+      height: 40px;
+      background-image: url("../img/sprite.svg#grain");
+    }
+
+    &--mountain::before {
+      background-image: url("../img/sprite.svg#mountain");
+    }
+
+    &:not(:last-child) {
+      margin-right: 70px;
+    }
+
+    span {
+      display: block;
+      font-weight: 600;
+      color: var(--color-fiord);
+    }
+  }
+}
+
+.btn {
+  @include flex-all-sb;
+  font-weight: 700;
+  line-height: 1.4;
+
+  button {
+    border-radius: 20px;
+    padding: 10px 30px;
+    color: var(--color-white);
+    background-color: var(--color-tan);
+  }
+
+  a {
+    margin-right: 70px;
+    text-decoration: none;
+    color: var(--color-fiord);
+    cursor: pointer;
+  }
+}
+
+.tabs {
+  border-left: 2px solid var(--color-mystic);
+  background-color: var(--color-concrete);
+
+  li {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 1;
+    color: var(--color-fiord);
+  }
+
+  button {
+    padding: 65px 40px;
+    background-color: var(--color-mystic);
+    opacity: 0.2;
+    mix-blend-mode: normal;
+  }
+
+  .item--active {
+    button {
+      background-color: inherit;
+      opacity: 1;
+    }
+  }
+}
