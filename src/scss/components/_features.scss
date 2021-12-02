@@ -1,0 +1,46 @@
+.features {
+  margin-bottom: 120px;
+
+  ul {
+    @include flex-sb;
+  }
+
+  .item {
+    position: relative;
+    padding-top: 80px;
+    width: 100%;
+    max-width: 225px;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: 0 auto;
+      width: 80px;
+      height: 80px;
+      background-image: url("../img/sprite.svg#coffee");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &:not(:last-child) {
+      margin-right: 70px;
+    }
+
+    &--quality::before {
+      background-image: url("../img/sprite.svg#quality");
+    }
+
+    &--bag::before {
+      background-image: url("../img/sprite.svg#bag");
+    }
+
+    &--machine::before {
+      background-image: url("../img/sprite.svg#coffee-machine");
+    }
+  }
+}
