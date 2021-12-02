@@ -28,6 +28,7 @@
 
 article {
   @include flex-sb;
+
   padding: 0 20px 50px;
   width: 100%;
   max-width: 985px;
@@ -48,6 +49,7 @@ article {
 
   ul {
     @include flex-sa;
+
     margin-bottom: 45px;
   }
 
@@ -81,6 +83,7 @@ article {
 
 .info {
   @include flex-all-sb;
+
   font-weight: 700;
   line-height: 1.4;
 
