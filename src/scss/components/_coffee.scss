@@ -63,12 +63,12 @@ article {
       background-image: url("../img/sprite.svg#grain");
     }
 
-    &--mountain::before {
-      background-image: url("../img/sprite.svg#mountain");
-    }
-
     &:not(:last-child) {
       margin-right: 70px;
+    }
+
+    &--mountain::before {
+      background-image: url("../img/sprite.svg#mountain");
     }
 
     span {
@@ -79,7 +79,7 @@ article {
   }
 }
 
-.btn {
+.info {
   @include flex-all-sb;
   font-weight: 700;
   line-height: 1.4;
@@ -101,15 +101,12 @@ article {
 
 .tabs {
   border-left: 2px solid var(--color-mystic);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--color-fiord);
   background-color: var(--color-concrete);
-
-  li {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 900;
-    font-size: 30px;
-    line-height: 1;
-    color: var(--color-fiord);
-  }
 
   button {
     padding: 65px 40px;
@@ -117,11 +114,11 @@ article {
     opacity: 0.2;
     mix-blend-mode: normal;
   }
+}
 
-  .item--active {
-    button {
-      background-color: inherit;
-      opacity: 1;
-    }
+.item--active {
+  button {
+    background-color: var(--color-white);
+    opacity: 1;
   }
 }
